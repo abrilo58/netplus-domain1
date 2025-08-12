@@ -1,0 +1,59 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Details/Spoiler Styling */
+details > summary {
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary {
+    margin-bottom: 0.5rem;
+}
+
+details[open] summary .arrow {
+    transform: rotate(90deg);
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Explanation Section */
+.explanation-section {
+    border-left: 3px solid #3b82f6;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.explanation-section ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Canvas Styling */
+canvas {
+    background-color: #f9fafb;
+    touch-action: none;
+}
+
+/* Dark Mode Adjustments */
+.dark canvas {
+    background-color: #1f2937;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    canvas {
+        height: 300px;
+    }
+}
